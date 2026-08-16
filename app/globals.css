@@ -3,23 +3,23 @@
 /* ─── Design tokens ─────────────────────────────────── */
 :root {
   /* ── Core palette ─── */
-  --color-bg:         #F4EFE6;   /* Warm Cream — page background */
-  --color-ink:        #171414;   /* Deep Ink — primary text & headings */
-  --color-burgundy:   #5A1F2B;   /* Deep Burgundy — signature accent */
-  --color-blush:      #D8C8C0;   /* Muted Blush/Taupe — hover surfaces */
-  --color-champagne:  #B39A6A;   /* Muted Champagne Gold — micro details */
+  --color-balsamico:    #150C0C;
+  --color-burnt-coffee: #34150F;
+  --color-honey-garlic: #85431E;
+  --color-whiskey-sour: #D39858;
+  --color-champagne:    #EACEAA;
 
   /* ── Semantic aliases (used throughout CSS) ─── */
-  --ink:        var(--color-ink);
-  --ink-mid:    #4A3F3C;         /* warm dark brown-grey for body text */
-  --ink-soft:   #8A7C78;         /* warm grey for secondary / labels */
-  --paper:      var(--color-bg);
-  --paper-warm: #EDE4D6;         /* slightly deeper warm for hover surfaces */
-  --accent:     var(--color-burgundy);
-  --accent-soft: #9A3D4A;        /* lighter burgundy for mid-weight accents */
-  --accent-light: var(--color-champagne);
-  --rule:       rgba(23, 20, 20, 0.08);
-  --rule-heavy: rgba(23, 20, 20, 0.16);
+  --ink:        var(--color-champagne);
+  --ink-mid:    var(--color-champagne);
+  --ink-soft:   var(--color-champagne);
+  --paper:      var(--color-balsamico);
+  --paper-warm: var(--color-burnt-coffee);
+  --accent:     var(--color-whiskey-sour);
+  --accent-soft: rgba(211, 152, 88, 0.8);        /* whiskey sour with opacity */
+  --accent-light: var(--color-whiskey-sour);
+  --rule:       rgba(133, 67, 30, 0.20);         /* honey garlic at 20% opacity */
+  --rule-heavy: rgba(133, 67, 30, 0.30);         /* honey garlic at 30% opacity */
 
   --serif:      'Cormorant Garamond', Georgia, serif;
   --sans:       'Inter', -apple-system, sans-serif;
@@ -165,7 +165,7 @@ button {
   right: 0;
   z-index: 100;
   height: var(--nav-h);
-  background: rgba(244, 239, 230, 0.94);
+  background: rgba(21, 12, 12, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--rule);
@@ -492,8 +492,8 @@ button {
   left: 0;
   right: 0;
   padding: 1.25rem 1.5rem;
-  background: linear-gradient(to top, rgba(23,20,20,0.72) 0%, transparent 100%);
-  color: #F4EFE6;
+  background: var(--color-champagne);
+  color: var(--color-balsamico);
   opacity: 0;
   transform: translateY(6px);
   transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out);
@@ -517,6 +517,8 @@ button {
   font-family: var(--serif);
   font-size: 1rem;
   font-weight: 400;
+  color: var(--color-balsamico);
+  text-shadow: none;
 }
 
 /* Contact */
@@ -603,8 +605,8 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--color-blush);
-  opacity: 0.35;
+  background: var(--paper-warm);
+  opacity: 0.6;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s var(--ease-out);
@@ -696,13 +698,15 @@ button {
 
 .project-editorial-overlay {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(23,20,20,0.7) 0%, rgba(23,20,20,0) 55%);
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: clamp(1.25rem, 3vw, 2rem);
-  color: var(--color-bg);
+  background: var(--color-champagne);
+  color: var(--color-balsamico);
 }
 
 .project-editorial-index {
@@ -720,6 +724,8 @@ button {
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   line-height: 1.1;
   margin-bottom: 0.25rem;
+  color: var(--color-balsamico);
+  text-shadow: none;
 }
 
 .project-editorial-subtitle {
@@ -739,8 +745,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(244, 239, 230, 0.4);
-  color: rgba(244, 239, 230, 0.9);
+  border: 1px solid var(--rule-heavy);
+  color: var(--ink);
   font-size: 0.875rem;
   border-radius: 50%;
   transform: rotate(-45deg) scale(0.85);
@@ -1252,7 +1258,7 @@ button {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: var(--color-bg);
+  background: var(--paper);
   color: var(--accent);
   padding: 0.5rem 1rem;
   font-family: var(--sans);
@@ -1262,7 +1268,7 @@ button {
   border: 1px solid var(--accent);
   border-radius: 4px;
   z-index: 100;
-  box-shadow: 0 4px 20px rgba(90, 31, 43, 0.08);
+  box-shadow: 0 4px 20px rgba(74, 23, 29, 0.08);
   transition: opacity 0.3s;
 }
 
@@ -1281,7 +1287,7 @@ button {
   background: var(--paper);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-blush);
+  background: var(--paper-warm);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -1367,8 +1373,8 @@ button {
   right: -8%;
   background: radial-gradient(
     circle at center,
-    rgba(90, 31, 43, 0.09) 0%,
-    rgba(179, 154, 106, 0.05) 50%,
+    rgba(74, 23, 29, 0.09) 0%,
+    rgba(184, 160, 120, 0.05) 50%,
     transparent 70%
   );
 }
@@ -1380,8 +1386,8 @@ button {
   left: -6%;
   background: radial-gradient(
     circle at center,
-    rgba(216, 200, 192, 0.2) 0%,
-    rgba(90, 31, 43, 0.04) 50%,
+    rgba(42, 33, 29, 0.12) 0%,
+    rgba(74, 23, 29, 0.04) 50%,
     transparent 70%
   );
 }
@@ -1417,3 +1423,5 @@ button {
     transform: none !important;
   }
 }
+
+

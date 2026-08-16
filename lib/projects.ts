@@ -47,6 +47,15 @@ export const projects: Project[] = [
     description:
       'An introspective collection examining identity and femininity through restraint — minimal lines, considered proportions, and a language of quiet strength.',
   },
+  {
+    slug: 'fashion-design-study',
+    index: '05',
+    title: 'Fashion Design Study',
+    subtitle: 'Couture & Gown Concepts',
+    pageCount: 8,
+    description:
+      'A detailed exploration of couture and gown concepts — featuring cascade construction, 3D floral embellishments, and structural silhouettes.',
+  },
 ]
 
 export function getProjectBySlug(slug: string): Project | undefined {

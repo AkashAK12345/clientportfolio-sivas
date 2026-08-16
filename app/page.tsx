@@ -15,7 +15,7 @@ const technicalSkills = [
 ]
 
 const softSkills = [
-  'Hard Worker',
+  'Client Communication',
   'Time Management',
   'Team Worker',
   'Multi-tasking',
@@ -24,7 +24,7 @@ const softSkills = [
 ]
 
 export default function AboutPage() {
-  const previewProjects = projects.slice(0, 4)
+  const previewProjects = projects.slice(0, 5)
 
   return (
     <>
@@ -74,9 +74,9 @@ export default function AboutPage() {
             <div>
               <p className="t-body">
                 Creative fashion designer with a passion for couture
-                craftsmanship and high-end ready-to-wear. Currently completing
-                a B.Des (Hons.) in Fashion Design at Woxsen University,
-                I bring a rigorous design sensibility to every garment —
+                craftsmanship and high-end ready-to-wear. I completed my
+                B.Des (Hons.) in Fashion Design at Woxsen University in 2026,
+                bringing a rigorous design sensibility to every garment —
                 from initial concept through final execution.
               </p>
               <p className="t-body" style={{ marginTop: '1rem' }}>
@@ -180,7 +180,7 @@ export default function AboutPage() {
         </div>
       </ScrollReveal>
       {/* ── Contact ───────────────────────────────────── */}
-      <ScrollReveal className="about-section" style={{ paddingBottom: '8rem' }}>
+      <ScrollReveal className="about-section" style={{ paddingBottom: '8rem', borderTop: 'none' }}>
         <div className="container">
           <div className="section-marker" style={{ marginBottom: '4rem' }}>
             <span className="section-number">04 / Contact</span>

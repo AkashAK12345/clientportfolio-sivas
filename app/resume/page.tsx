@@ -30,7 +30,7 @@ const education = [
   {
     degree: 'B.Des (Hons.), Fashion Design',
     school: 'Woxsen University',
-    period: '2022 – 2026',
+    period: '2026',
   },
   {
     degree: '10th & 12th',
@@ -50,7 +50,7 @@ const technicalSkills = [
 ]
 
 const softSkills = [
-  'Hard Worker',
+  'Client Communication',
   'Time Management',
   'Team Worker',
   'Multi-tasking',
@@ -192,7 +192,7 @@ export default function ResumePage() {
               </h2>
             </div>
             {experience.map((exp) => (
-              <div key={`${exp.role}-${exp.company}`} className="resume-exp-item" style={{ borderTop: '1px solid rgba(90, 31, 43, 0.18)', paddingTop: '2rem', marginBottom: '3rem' }}>
+              <div key={`${exp.role}-${exp.company}`} className="resume-exp-item" style={{ borderTop: '1px solid var(--rule-heavy)', paddingTop: '2rem', marginBottom: '3rem' }}>
                 <h3 className="t-title" style={{ color: 'var(--ink)', marginBottom: '0.5rem' }}>{exp.role}</h3>
                 <p className="resume-exp-company" style={{ textTransform: 'uppercase', letterSpacing: '0.1em' }}>
                   {exp.company}
@@ -211,7 +211,7 @@ export default function ResumePage() {
               </h2>
             </div>
             {education.map((edu) => (
-              <div key={edu.degree} className="resume-edu-item" style={{ borderTop: '1px solid rgba(90, 31, 43, 0.18)', paddingTop: '2rem', marginBottom: '3rem' }}>
+              <div key={edu.degree} className="resume-edu-item" style={{ borderTop: '1px solid var(--rule-heavy)', paddingTop: '2rem', marginBottom: '3rem' }}>
                 <h3 className="t-title" style={{ color: 'var(--ink)', marginBottom: '0.5rem' }}>{edu.degree}</h3>
                 <p className="resume-edu-school" style={{ textTransform: 'uppercase', letterSpacing: '0.1em' }}>
                   {edu.school}
