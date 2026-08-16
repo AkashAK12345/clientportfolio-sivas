@@ -50,7 +50,7 @@ export const projects: Project[] = [
   {
     slug: 'fashion-design-study',
     index: '05',
-    title: 'Fashion Design Study',
+    title: 'Fashion Illustration',
     subtitle: 'Couture & Gown Concepts',
     pageCount: 8,
     description:
