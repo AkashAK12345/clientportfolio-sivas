@@ -30,8 +30,16 @@ export const projects: Project[] = [
       'Inspired by the Palace of Mirrors, this collection explores the interplay of reflection and transparency — intricate surface work, crystalline textures, and luminous silhouettes.',
   },
   {
-    slug: 'aerostruct',
+    slug: 'selestia',
     index: '03',
+    title: 'Selestia',
+    subtitle: '',
+    pageCount: 24,
+    description: '',
+  },
+  {
+    slug: 'aerostruct',
+    index: '04',
     title: 'Aerostruct',
     subtitle: '',
     pageCount: 24,
@@ -40,7 +48,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'ann',
-    index: '04',
+    index: '05',
     title: 'ANN',
     subtitle: '',
     pageCount: 27,
@@ -49,7 +57,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'fashion-design-study',
-    index: '05',
+    index: '06',
     title: 'Fashion Illustration',
     subtitle: 'Couture & Gown Concepts',
     pageCount: 8,
